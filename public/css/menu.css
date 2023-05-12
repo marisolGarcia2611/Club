@@ -1,0 +1,708 @@
+:root {
+  --bg: rgb(228, 228, 228);
+  --navBg:#FFF;
+  --menuBag:#2e923f;
+  --etiquetaSBprincipal:rgb(0, 109, 160);   
+  --etiquetaSBdegradado:linear-gradient(270deg, #0bc8cb 0, #1fbae1 25%, #53bcf2 50%, #539dca 75%, #4f81a4 100%);
+  --etiquetaSBsecundario:rgba(101, 101, 101, 0.281);
+  --scrollColor:#05597d;
+  --font: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+  --text-etiquetaP:#32394B;
+  --text-etiquetaS:#32394B;
+  --text-etiquetaPHover:#fff;
+  --text-etiquetaSHover:#32394B;
+
+  /* background: var(--color); */
+}
+.carrusel__site{
+width: 100%;height:700px;object-fit: cover;
+}
+.font__cub{
+font-size:100px;color: beige;
+}
+
+.img__site{
+margin-bottom: 100px;margin-top: 100px;
+}
+
+
+.font__cub{
+font-size:100px;color: beige;
+margin: 50px;
+}
+
+@media screen and (max-width:600px) {
+  /* #sidebar-nav {
+      
+      width: 150px;
+      padding: 5px;
+      padding-left: 20px;
+      padding-right:20px ;
+  } */
+  .nv__style{
+      height:60px;
+      width: 100%;
+      z-index: 2;
+      top: 0vh;
+      margin-top: -10px;
+      position: fixed;
+     
+      box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.132);
+  
+  }
+  .font__cub{
+    font-size:50px;color: beige;
+    margin: 50px;
+  }
+  .cub__size{
+    height: 300px;
+  }
+
+
+}
+
+@media screen and (max-width:1900px) {
+
+  .nv__style{
+      background-color: var(--navBg);
+      height:60px;
+      width: 100%;
+      z-index: 2;
+      margin-top: -10px;
+      top: 0vh;
+      position: fixed;
+    
+      box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.132);
+  
+  }
+
+
+}
+
+
+
+.nv__style{
+height:6%;
+width: 100%;
+z-index: 2;
+top: 0vh;
+margin-top: -10px;
+
+box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.132);
+
+}
+
+/*-------------------------------*/
+/*       Hamburger-Cross         */
+/*-------------------------------*/
+
+.hamburger {
+position: fixed;
+top: 4px;  
+z-index: 4;
+display: block;
+width: 25px;
+height: 25px;
+margin-left: -2px;
+border: none;
+background-color: #2B86C5
+
+}
+.hamburger:hover,
+.hamburger:focus,
+.hamburger:active {
+outline: none;
+}
+.hamburger.is-closed:before {
+content: '';
+display: block;
+width: 100px;
+font-size: 14px;
+color:#212529;
+line-height: 32px;
+text-align: center;
+opacity: 0;
+-webkit-transform: translate3d(0,s0,0);
+-webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-closed:hover:before {
+opacity: 1;
+display: block;
+-webkit-transform: translate3d(-100px,0,0);
+-webkit-transition: all .35s ease-in-out;
+}
+
+.hamburger.is-closed .hamb-top,
+.hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom,
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-middle,
+.hamburger.is-open .hamb-bottom {
+position: absolute;
+left: 0;
+height: 2px;
+width: 100%;
+border-radius: 20px;
+}
+.hamburger.is-closed .hamb-top,
+.hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom {
+background-color:#039a77;
+}
+.hamburger.is-closed .hamb-top { 
+top: 5px; 
+-webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-closed .hamb-middle {
+top: 50%;
+margin-top: -2px;
+}
+.hamburger.is-closed .hamb-bottom {
+bottom: 5px;  
+-webkit-transition: all .35s ease-in-out;
+}
+
+.hamburger.is-closed:hover .hamb-top {
+top: 0;
+-webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-closed:hover .hamb-bottom {
+bottom: 0;
+-webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-middle,
+.hamburger.is-open .hamb-bottom {
+background-color: var(--menuBag);
+}
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-bottom {
+top: 50%;
+margin-top: -2px;  
+}
+.hamburger.is-open .hamb-top { 
+-webkit-transform: rotate(45deg);
+-webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
+}
+.hamburger.is-open .hamb-middle { display: none; }
+.hamburger.is-open .hamb-bottom {
+-webkit-transform: rotate(-45deg);
+-webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
+}
+.hamburger.is-open:before {
+content: '';
+display: block;
+width: 100px;
+font-size: 14px;
+color: var(--navBg);
+line-height: 32px;
+text-align: center;
+opacity: 0;
+-webkit-transform: translate3d(0,0,0);
+-webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-open:hover:before {
+opacity: 1;
+display: block;
+-webkit-transform: translate3d(-100px,0,0);
+-webkit-transition: all .35s ease-in-out;
+}
+
+
+/* -------------------Etiquetas de sidebar------------------ */
+
+.e__sidebar {
+  float: none;
+  border-radius: 30px;
+  font-size: 13px;
+  -webkit-transition: all 0.3s ease;
+  color: var(--text-etiquetaP);
+  transition: all 0.3s ease;
+  border-radius: 20px;
+}
+
+ /* Add a background color on hover */
+ .e__sidebar:hover {
+  background-color: #2E3192;
+background-image: linear-gradient(45deg,#2E3192,#0095D9);  
+  color: var(--text-etiquetaPHover);
+  -webkit-transform: scale(1.1) !important;
+   transform: scale(1.04) !important;
+}
+
+.e__sidebar1 {
+  float: none;
+  border-radius: 30px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size:13px;
+  border-radius: 20px;
+  color: var(--text-etiquetaP);
+  padding: 20px;
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+
+.e__sidebar1:hover {
+  background-color: #2E3192;
+background-image: linear-gradient(45deg,#2E3192,#0095D9); 
+  /* background-color: rgb(1, 163, 237);    */
+  color: var(--text-etiquetaPHover);
+  -webkit-transform: scale(1.1) !important;
+   transform: scale(1.04) !important;
+}
+.e__sidebar2 {
+  float: none;
+  border-radius: 30px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 12px;
+  border-radius: 20px;
+  color: var(--text-etiquetaS);
+  text-decoration: none;
+  display: block;
+}
+
+.e__sidebar2:hover {
+  background-color: var(--etiquetaSBsecundario);   
+  -webkit-transform: scale(1.1) !important;
+  color: var(--text-etiquetaSHover);
+   transform: scale(1.04) !important;
+}
+
+
+.a__state{
+  border-radius:20px;margin-top:5px;
+}
+
+
+.icon{
+  margin-right:10px;
+}
+
+.b__lateral{
+   border-top-right-radius:50px;
+ /* border-bottom-right-radius:10px; */
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.132);
+}
+
+  /* -------------------------------------------------Scroll ----------------------------------------------*/
+
+
+  .contenedor-light{
+      overflow-y: scroll;
+      box-sizing: border-box;
+      
+    }
+    
+    /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+    
+    .contenedor-light::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+    
+    .contenedor-light::-webkit-scrollbar:vertical {
+      width:8px;
+      height: 5px;
+    }
+    
+    .contenedor-light::-webkit-scrollbar-button:increment,.contenedor-light::-webkit-scrollbar-button {
+      display: none;
+    } 
+    
+    .contenedor-light::-webkit-scrollbar:horizontal {
+      height: 10px;
+    }
+    
+    .contenedor-light::-webkit-scrollbar-thumb {
+      background-color: var(--bg);
+      /* background-image: linear-gradient(180deg, #00ffff 0, #41f5ff 25%, #53bcf2 50%, #5087ab 75%, #425a6e 100%); */
+      border-radius: 20px;
+      border: 1px solid var(--bg);
+      
+    }
+    
+    .contenedor-light::-webkit-scrollbar-track {
+      border-radius: 10px;  
+    }
+
+      /* -------------------------------------------------Scroll All----------------------------------------------*/
+
+
+  .contenedor{height:100vh;scroll-behavior: auto;overflow-y: auto;overflow-x: hidden;}
+  .contenedor::-webkit-scrollbar {
+        width: 8px;     /* Tamaño del scroll en vertical */
+        height: 8px;    /* Tamaño del scroll en horizontal */
+    }
+    /* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+    .contenedor::-webkit-scrollbar-thumb {
+        background: #a5a5a5;
+        border-radius: 4px;
+    }
+    /* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+    .contenedor::-webkit-scrollbar-thumb:hover {
+        background: #9e9e9e;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    /* Cambiamos el fondo cuando esté en active */
+    .contenedor::-webkit-scrollbar-thumb:active {
+        background-color: #999999;
+    }
+    /* Ponemos un color de fondo y redondeamos las esquinas del track */
+    .contenedor::-webkit-scrollbar-track {
+        background: #e1e1e1;
+        border-radius: 4px;
+    }
+    /* Cambiamos el fondo cuando esté en active o hover */
+    .contenedor::-webkit-scrollbar-track:hover,
+    .contenedor::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
+    }
+
+  .push{
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+      
+  .push:hover {
+      -webkit-transform: scale(1.1) !important;
+      transform: scale(1.04) !important;
+    }
+
+    /*----------------------------------------------------------------- button1--------------------------------------------------- */
+
+.pos__btnBack{
+  z-index: 1;margin-top:0px;top: 1.8vh;position: absolute;left: 0;margin-left: 8px;
+}
+
+  .wrapper {
+      padding: 1.5rem 0;
+      filter: url('#goo');
+  }
+  
+  .btnBack {
+      display: inline-block;
+      font-size: 20px!important;
+      text-align: center;
+      background-color: #f6f6f6!important;
+      color:#8b8b8b!important;
+      border: 0px!important;
+      font-weight: bold;
+      line-height: 1;
+      padding: 13px;
+      border-radius: 1px;
+      position: relative;
+      width: 48px;
+      height: 45px;
+      text-decoration: none;
+      -webkit-transition: all 0.3s ease;transition: all 0.3s ease;
+  }
+  .btnBack:hover {
+    display: inline-block;
+    text-align: center;
+    background-color: #f6f6f6!important;
+    color:#8b8b8b!important;
+    font-weight: bold;
+    line-height: 1;
+    border: 0px!important;
+    padding: 13px;
+    border-radius: 1px;
+    position: relative;
+    width: 48px;
+    height: 45px;
+    text-decoration: none;
+    -webkit-transform: scale(1.1) !important;transform: scale(1.4) !important;
+    cursor: pointer;
+  }
+  
+
+  
+  .btnBack:before {
+      top: -25%;
+      left: 20%;
+  }
+  
+  .btnBack:after {
+      bottom: -25%;
+      right: 20%;
+  }
+  
+  .btnBack:hover:before,
+  .btnBack:hover:after {
+      transform: none;
+  }
+
+  /*----------------------------------------------------------------- button2--------------------------------------------------- */
+
+  .pos__btnBack1{
+    z-index: 1;margin-top:0px;top: 1.8vh;position: fixed;left: 0;margin-left: 8px;
+  }
+
+  .btnBack1 {
+    display: inline-block;
+    text-align: center;
+    background-color: #ffffff!important;
+    color:#8b8b8b!important;
+    font-weight: bold;
+    line-height: 1;
+    padding: 13px;
+    border-radius: 1px;
+    position: relative;
+    width: 48px;
+    height: 45px;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;transition: all 0.3s ease;
+    }
+    .btnBack1:hover {
+      display: inline-block;
+      text-align: center;
+      background-color: #ffffff!important;
+      color:#8b8b8b!important;
+      font-weight: bold;
+      line-height: 1;
+      padding: 13px;
+      border-radius: 1px;
+      position: relative;
+      width: 48px;
+      height: 45px;
+      text-decoration: none;
+      -webkit-transform: scale(1.1) !important;transform: scale(1.4) !important;
+      cursor: pointer;
+    }
+
+
+
+    .btnBack1:before {
+        top: -25%;
+        left: 20%;
+    }
+
+    .btnBack1:after {
+        bottom: -25%;
+        right: 20%;
+    }
+
+    .btnBack1:hover:before,
+    .btnBack1:hover:after {
+        transform: none;
+    }
+  
+
+    /*----------------------------------------------------------------- button Notification--------------------------------------------------- */
+    .pos__btnNotification{
+      z-index: 1;margin-top:0px;top: 1.8vh;position: absolute;right: 0;margin-right: 8px;
+    }
+    .btnNoti {
+      display: inline-block;
+      text-align: center;
+      background-color: #f6f6f6;
+      color:#8b8b8b!important;
+      font-weight: bold;
+      line-height: 1;
+      padding: 13px;
+      border-radius: 1px;
+      position: relative;
+      width: 48px;
+      height: 45px;
+      text-decoration: none;
+    }
+    .btnNoti:hover {
+      display: inline-block;
+      text-align: center;
+      background-color: #f6f6f6;
+      color:#8b8b8b!important;
+      font-weight: bold;
+      line-height: 1;
+      padding: 13px;
+      border-radius: 1px;
+      position: relative;
+      width: 48px;
+      height: 45px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+  
+    
+    .btnNoti:before {
+        top: -25%;
+        right: 20%;
+    }
+    
+    .btnNoti:after {
+        bottom: -25%;
+        left: 20%;
+    }
+    
+    .btnNoti:hover:before,
+    .btnNoti:hover:after {
+        transform: none;
+    }
+
+    /*----------------------------------------------------------------- button icon--------------------------------------------------- */
+    .pos__ico{
+      z-index: 1;margin-top:30px;top: 1.8vh;position: absolute;right: 0;margin-right: 15px;
+    }
+    .ico__image{width: 90px;height:50px;}
+
+    @media screen and (max-width:600px) { 
+      .ico__image{width: 55px;height:30px;}
+    }
+
+
+
+    /*----------------------------------------------------------------- button animate--------------------------------------------------- */
+
+.wr {
+  text-align: center;
+}
+.mt-d8{margin-top: -5px}
+
+
+
+@keyframes rotate {from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}}
+@-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
+to {-webkit-transform: rotate(360deg);}}
+.imgr:hover{
+  -webkit-animation: 3s rotate linear infinite;
+  animation: 2s rotate linear infinite;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+#imgr2 {
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+.wr button {
+  background-color: #2e923f;background-image: linear-gradient(45deg,#2e923f,#02a2a4);
+  color: #fff;
+  border: 0.15rem solid #02a2a4;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+@media screen and (max-width:600px) {
+  .wr {text-align: center;}
+
+  .wr button {
+    background-color: #2e923f;background-image: linear-gradient(45deg,#2e923f,#02a2a4);
+    color: #fff;
+    border: 0.15rem solid #02a2a4;
+    padding: 3px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+  }
+}
+.wr button:hover {
+  color: #02a2a4;
+}
+.wr button::after {
+  content: "";
+  background: #ecf0f1;
+  position: absolute;
+  z-index: -1;
+  padding: 0.85em 0.75em;
+  display: block;
+}
+.wr button[class^="slide"]::after {
+  transition: all 0.35s;
+}
+.wr button[class^="slide"]:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all 0.35s;
+}
+.wr button.slide_from_left::after {
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+}
+.wr button.slide_from_right::after {
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  right: -100%;
+}
+.wr button.slide_from_top::after {
+  left: 0;
+  right: 0;
+  top: -100%;
+  bottom: 100%;
+}
+.wr button.slide_from_bottom::after {
+  left: 0;
+  right: 0;
+  top: 100%;
+  bottom: -100%;
+}
+.wr button[class^="grow"]::after {
+  transition: all 0.3s ease;
+}
+.wr button[class^="grow"]:hover::after {
+  transition: all 0.3s ease-out;
+}
+.wr button.grow_box::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: scale(0, 0);
+}
+.wr button.grow_box:hover::after {
+  transform: scale(1, 1);
+}
+.wr button.grow_ellipse::after {
+  border-radius: 50%;
+  left: -50%;
+  right: -50%;
+  top: -150%;
+  bottom: -150%;
+  line-height: 8.34em;
+  transform: scale(0, 0);
+}
+.wr button.grow_ellipse:hover::after {
+  transform: scale(1, 1);
+}
+.wr button.grow_skew_forward::after {
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+}
+.wr button.grow_skew_forward:hover::after {
+  transform: skewX(-45deg) scale(1, 1);
+}
+.wr button.grow_skew_backward::after {
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(45deg) scale(0, 1);
+}
+.wr button.grow_skew_backward:hover::after {
+  transform: skewX(45deg) scale(1, 1);
+}
+.wr button.grow_spin::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: scale(0, 0) rotate(-180deg);
+}
+.wr button.grow_spin:hover::after {
+  transform: scale(1, 1) rotate(0deg);
+}
